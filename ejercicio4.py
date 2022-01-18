@@ -28,11 +28,6 @@ dojo = {
    'instructores': ['Michael', 'Amy', 'Eduardo', 'Josh', 'Graham', 'Patrick', 'Minh', 'Devon']
 }
 
-nombreClave=dojo.get(['ubicaciones'][0])
-print("TEST", nombreClave)
-
-x = [1,2,3,'hola']
-print("EJEMPLO DE METODO PARA DICT",x)
 
 def printInfo(some_dict):
     listaClaves=list(some_dict.keys())
@@ -40,7 +35,6 @@ def printInfo(some_dict):
     for x in range(0,len(listaClaves)):
 
         nombreClave=listaClaves[x]
-        print("GET Dicc", nombreClave)
         numeroElementos=len(some_dict.get(nombreClave))
         tituloMayusc=nombreClave.upper()
         print(f"{numeroElementos} {tituloMayusc}")
@@ -49,5 +43,16 @@ def printInfo(some_dict):
             print(some_dict.get(nombreClave)[i])
 
 printInfo(dojo)
+
+
+
+
+# Otra solución (Coding dojo)
+# def print_info(dict):
+#     for key,val in dict.items():
+#         print(f"{len(val)} {key.upper()}")
+#         for i in range(0, len(val)):
+#             print(val[i])
+# print_info(dojo)
 
 
